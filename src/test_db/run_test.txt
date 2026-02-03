@@ -1,0 +1,1 @@
+LD_PRELOAD=/root/anaconda3/envs/kb/lib/libstdc++.so.6 python test_retrieval.py
