@@ -1,0 +1,12 @@
+set env:
+
+export LD_PRELOAD=/root/anaconda3/envs/kb/lib/libstdc++.so.6
+
+
+
+test command:
+
+# 完整RAG模式（推荐）
+python rag.py --clause "借款利率为年化6%，按季结息" --output "result.json"
+# 简单模式（不检索知识库，更快）
+python rag.py --clause "借款利率为年化6%，按季结息" --simple --output "simple_result.json"

@@ -191,19 +191,20 @@ def test_bank_contract_queries(retriever: KnowledgeBaseRetriever):
     
     # 银行合同相关的测试查询
     test_queries = [
-        "贷款利率",
-        "违约责任",
-        "担保条款",
-        "抵押物",
-        "提前还款",
-        "争议解决",
-        "违约金",
-        "保证责任"
+        "借款利率为年化6%，按季结息，到期一次性还本"
+        # "贷款利率",
+        # "违约责任",
+        # "担保条款",
+        # "抵押物",
+        # "提前还款",
+        # "争议解决",
+        # "违约金",
+        # "保证责任"
     ]
     
     for query in test_queries:
         print(f"\n查询: '{query}'")
-        results = retriever.search_by_text(query, n_results=2)
+        results = retriever.search_by_text(query, n_results=5)
         print_results(results)
 
 def main():
